@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Shadows+Into+Light&display=swap');
+
+:root {
+--primary-color: #000000;
+--secondary-color: #d4af37;
+--accent1-color: #D3D3D3;
+--accent2-color: #0000FF;
+--heading-font: "Arvo";
+--paragraph-font: Lato, Helvetica, sans-serif;
+}
+
+body{
+    background-color: var(--secondary-color);
+    font-family: var(--paragraph-font);
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+#content{
+max-width: 1600px;
+margin: 0 auto;
+}
+
+header{
+    background-color: rgba(20,30,13,.7);
+    display: grid;
+    text-align: center;
+    grid-template-columns: 150px auto;
+}
+
+#logo_link{
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;
+}
+.logo{
+    width: 80px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+nav a{
+    margin: 0 auto;
+    text-align: center;
+    color: #fcfbfb;
+    text-decoration: none;
+    padding: 35px;
+}
+nav a:hover{
+    background-color: black;
+    color: gold;
+}
+
+.button-box{
+    text-align: center;
+}
+
+main section{
+text-align: center;
+}
+main section img{
+    box-sizing: border-box;
+}
+
+footer{
+    background-color: rgba(20,30,13,.7);
+    color: black;
+    padding: 25px 50px;
+    padding-top: 15px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color:blue;
+}
+footer p{
+    font-size: 1.2em;
+}
+footer p a:hover{
+    text-decoration: underline;
+}
+
+/* Home Section */
+
+.home-grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.coo{
+    width: 50%;
+    float: left; 
+    padding: 0 20px 20px 0;
+}
+
+.statistician{
+    width: 50%;
+    float: left; 
+    padding: 0 20px 20px 0;
+}
+
+.data_scientist{
+    width: 50%;
+    float: left;
+    padding: 0 20px 20px 0;
+}
+
+/* Properties Section */
+
+/* SOP Section */
