@@ -54,16 +54,16 @@ nav a:hover{
     color: gold;
 }
 
-.button-box{
+/* .button-box{
     text-align: center;
-}
+} */
 
-main section{
+section{
 text-align: center;
 }
-main section img{
+/* main section img{
     box-sizing: border-box;
-}
+} */
 
 footer{
     background-color: rgba(20,30,13,.7);
@@ -118,7 +118,7 @@ footer p a:hover{
 
 .container{
   max-width: 750px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 /* Slider Section */
