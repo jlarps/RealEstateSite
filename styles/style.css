@@ -58,9 +58,9 @@ nav a:hover{
     text-align: center;
 } */
 
-section{
+/* div{
 text-align: center;
-}
+} */
 /* main section img{
     box-sizing: border-box;
 } */
@@ -93,7 +93,16 @@ footer p a:hover{
 
 .slider-card{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+}
+
+.slider-card p{
+  text-align: center;
+}
+
+.property-list_1{
+  float:right;
 }
 
 .coo{
