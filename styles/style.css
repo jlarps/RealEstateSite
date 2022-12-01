@@ -101,10 +101,6 @@ footer p a:hover{
   text-align: center;
 }
 
-.property-list_1{
-  float:right;
-}
-
 .coo{
     width: 50%;
     float: left; 
@@ -223,6 +219,7 @@ footer p a:hover{
 .property-list_1{
   grid-row: auto;
   grid-column: auto;
+  float:right;
 }
 
 /* SOP Section */
