@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <div id="content">
+      <header>
+        <a id="logo_link" href="properties.html">
+          <img
+            class="logo"
+            src="images/Wind_Prop_Invest_Logo.jpg"
+            alt="Windfall Logo"
+          />
+        </a>
+        <nav>
+          <a href="index.html">Home</a>
+          <div class="dropdown">
+            <button class="dropbtn">Properties</button>
+            <div class="dropdown-content">
+                <a href="property1.html">Property1</a>
+                <a href="property2.html">Property2</a>
+                <a href="property3.html">Property3</a>
+                <a href="property4.html">Property4</a>
+                <a href="property5.html">Property5</a>
+                <a href="property6.html">Property6</a>
+            </div>
+          </div>
+
+          <a href="sop.html">SOP</a>
+        </nav>
+      </header>
+      <main class="properties-grid">
+        <section class="slider-card">
+          <!-- Container for the image gallery -->
+          <div class="container">
+            <!-- Full-width images with number text -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 4</div>
+              <img src="images/336_2nd_Ave_N_Resize.jpg" style="width: 100%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">2 / 4</div>
+              <img src="images/336_1.jpg" style="width: 100%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">3 / 4</div>
+              <img src="images/336_2.jpg" style="width: 100%" />
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">4 / 4</div>
+              <img src="images/336_3_resize.jpg" style="width: 100%" />
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Image text -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="row">
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="images/336_2nd_Ave_N_Resize.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide(1)"
+                  alt="The Front Door"
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="images/336_1.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide(2)"
+                  alt="Kitchen"
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="images/336_2_resize.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide(3)"
+                  alt="Window of Doom"
+                />
+              </div>
+              <div class="column">
+                <img
+                  class="demo cursor"
+                  src="images/336_3_resize.jpg"
+                  style="width: 100%"
+                  onclick="currentSlide(4)"
+                  alt="Tony being Tony"
+                />
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Property 2 Information
+        </p>
+    <div class="prop-info">
+        <ul>
+            <li>Bds: 3</li>
+            <li>Baths: 1</li>
+            <li>Sqft: 1730</li>
+            <li>Yr Built: 1908</li>
+        </ul>
+        <ul>
+            <li>Address: 336 2nd Ave N</li>
+            <li>Units: 2</li>
+            <li>Floors: 3</li>
+        </ul>
+    </div>
+        <p>
+            Loan & Purchase Information
+        </p>
+    <div class="prop-info">
+        <ul>
+            <li>Purchase Date: 6/30/2016</li>
+            <li>Purchase Price: $52,000.00</li>
+        </ul>
+        <ul>
+            <li>Loan Amount:</li>
+            <li>Loan Term:</li>
+            <li>Loan Interest Rate:</li>
+            <li>Lender:</li>
+            <li>Monthly Payment:</li>
+        </ul>
+    </div>
+        </section>
+      </main>
+      <footer>
+        <p>Windfall Property Investments LLC; 2022 - Jared Arp</p>
+        <p><a href="site-plan.html">Site Plan</a></p>
+        <!-- <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="fb icon" />
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon" />
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon" />
+                </a>
+            </div> -->
+      </footer>
+    </div>
+    <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+      }
+    </script>
+  </body>
+</html>

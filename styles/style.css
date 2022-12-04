@@ -54,6 +54,52 @@ nav a:hover{
     color: gold;
 }
 
+.dropdown {
+  float: left;
+  overflow: hidden;
+  height: 60px;
+  margin-top: 15px;
+}
+
+.dropbtn, dropdown {
+  padding: 17px 16px;
+  font-size: 22px;
+  border: none;
+  background-color: inherit;
+  margin: 0;
+  color: white;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.dropdown-content a:hover {
+  color: gold;
+  transform: scale(1.1);
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+  background-color: rgba(20,30,13,.7);
+}
+
+.dropdown:hover .dropbtn {
+  background-color: inherit;
+  color: gold;
+}
+
 /* .button-box{
     text-align: center;
 } */
@@ -91,14 +137,9 @@ footer p a:hover{
 
 /* Home Section */
 
-.slider-card{
+.home-grid{
     display: grid;
-    grid-template-rows: 1fr;
-    justify-content: center;
-}
-
-.slider-card p{
-  text-align: center;
+    grid-template-rows: 1fr 1fr;
 }
 
 .coo{
@@ -120,6 +161,11 @@ footer p a:hover{
 }
 
 /* Properties Section */
+
+.properties-grid{
+  display:grid;
+  justify-content: center;
+}
 
 .container{
   max-width: 750px;
@@ -216,10 +262,9 @@ footer p a:hover{
 
 /* property list section */
 
-.property-list_1{
-  grid-row: auto;
-  grid-column: auto;
-  float:right;
+.prop-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /* SOP Section */
